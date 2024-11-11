@@ -15,20 +15,20 @@ Ce répertoire contient les notebook utilisés pour entrainer et évaluer le mod
 ## 1. Logs
 
 ```
-Epoch 1/5
+Epoch 1/6
 100/100 [==============================] - 1575s 16s/step - loss: 3.4451 - val_loss: 2.5046
-Epoch 2/5
+Epoch 2/6
 100/100 [==============================] - 1553s 16s/step - loss: 2.3474 - val_loss: 2.3218
-Epoch 3/5
+Epoch 3/6
 100/100 [==============================] - 1554s 16s/step - loss: 1.8803 - val_loss: 1.3393
-Epoch 4/5
+Epoch 4/6
 100/100 [==============================] - 1527s 15s/step - loss: 1.7480 - val_loss: 0.9975
-Epoch 5/5
+Epoch 5/6
 100/100 [==============================] - 1522s 15s/step - loss: 1.6851 - val_loss: 1.1672
 Epoch 6/6
 100/100 [==============================] - 1529s 15s/step - loss: 1.5312 - val_loss: 0.7886
 ```
-_Dernière Ligne du Journal :_  
+_Dernière Ligne du log :_  
 Perte d’Entraînement (dernier epoch) : **1.6851**  
 Perte de Validation (dernier epoch) : **1.1672**
 
@@ -63,20 +63,18 @@ Le tableau suivant résume les hyperparamètres que nous avons testés lors de l
 
 | Hyperparamètre       | Valeur(s) Testée(s)        | Valeur Finale        |
 |----------------------|----------------------------|-----------------------|
-| Taux d'Apprentissage (lr) | `0.001`, `0.005`, `0.01` | `0.001`           |
-| Optimiseur           | `SGD`, `Adam`   | `SGD`               |
+| Learning Rate | `0.001`, `0.005`, `0.01` | `0.001`           |
+| Optimizer           | `SGD`, `Adam`   | `SGD`               |
 | Epochs               |  `100`, `250`, `500`  |  `100`                |
-| Régularisation       | `L1: 0.001`, `L1: 0.0001`  | `Pas de L1, uniquement le régularisateur L2 par défaut` |
+| Regularization       | `L1: 0.001`, `L1: 0.0001`  | `Pas de L1, uniquement le régularisateur L2 par défaut` |
 |IMAGE_MAX_DIM | `512`, `1024` | `512` |
 
 ## 7. Observations et Commentaires
 Basé sur les résultats, voici quelques observations et réflexions générées manuellement :
-
-- **Convergence du Modèle :** Les pertes d'entraînement et de validation montrent [décrire tout surapprentissage, sous-apprentissage ou comportements de convergence observés]. Cela suggère que [insérer une explication concernant le comportement d'entraînement, comme un entraînement suffisant ou le besoin de plus de données/de l'augmentation de données].
   
 - **Efficacité des Hyperparamètres :** Parmi les hyperparamètres testés, pour notre dataset, le taux d'apprentissage de `0.001` avec l'optimiseur `SGD` a permis la meilleur convergence.
 
-- **Analyse de la Matrice de Confusion :** On peut  conclure que notre modèle est performant mais pourrait être perfectible en testant d'autres paramètres, en faisant attention à ne pas e^tre dans un cas d'overfiting.
+- **Analyse de la Matrice de Confusion :** On peut  conclure que notre modèle est performant mais pourrait être perfectible en testant d'autres paramètres, en faisant attention à ne pas être dans un cas d'overfiting.
 
 
 
