@@ -30,7 +30,7 @@ Le tableau suivant résume les hyperparamètres que nous avons testés lors de l
 | Learning Rate | `0.001`, `0.005`, `0.01` | `0.001`           |
 | Optimizer           | `SGD`, `Adam`   | `SGD`               |
 | Steps per Epoch               |  `100`, `250`, `500`  |  `100`                |
-| Epochs             |  `2`, `5`, `10`, `20`  |  `10`                |
+| Epochs             |  `3`, `5`, `10`, `20`  |  `3`                |
 | Regularization       | `L1: 0.001`, `L1: 0.0001`  | `Pas de L1, uniquement le régularisateur L2 par défaut` |
 |IMAGE_MAX_DIM | `512`, `1024` | `512` |
 
@@ -68,8 +68,10 @@ Les graphs ci-dessous montrent la progression des pertes d'entraînements et de 
 
 ![Pertes d'Entraînement et de Validation](./images/epoch_loss_v1.jpg)
 
+On peut remarquer que l'entrainement overfit à partir de 2 epochs (en partant de 0) nous avons donc entrainer le modèle sur **3 epochs** par la suite
+
 ## 5. Matrice de Confusion
-La matrice de confusion ci-dessous montre les performances du modèle sur le jeu de données de test.
+La matrice de confusion ci-dessous montre les performances du modèle sur le jeu de données de test entrainé sur 3 epochs.
 
 ![Matrice de Confusion](./images/confusion_matrix_v1.png)
 
