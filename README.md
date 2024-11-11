@@ -12,9 +12,17 @@ Ce rapport détaille le processus d'entraînement et les résultats de notre mod
 
 Ce répertoire contient les notebook utilisés pour entrainer et évaluer le modèle dans le dossier ```/src/eval.ipynb``` et ```/src/train.ipynb```
 
+## 1. Jeu de Données
+Voici quelques exemples tirés du jeu de données, incluant des échantillons utilisés pour l'entraînement, la validation et le test.
+
+![data](./images/maksssksksss101.png)
+![data](./images/maksssksksss102.png)
+![data](./images/maksssksksss103.png)
 
 
-## 6. Hyperparamètres
+
+
+## 2. Hyperparamètres
 Le tableau suivant résume les hyperparamètres que nous avons testés lors de l'entraînement et la valeur finale que nous avons utilisé.
 
 | Hyperparamètre       | Valeur(s) Testée(s)        | Valeur Finale        |
@@ -26,18 +34,7 @@ Le tableau suivant résume les hyperparamètres que nous avons testés lors de l
 | Regularization       | `L1: 0.001`, `L1: 0.0001`  | `Pas de L1, uniquement le régularisateur L2 par défaut` |
 |IMAGE_MAX_DIM | `512`, `1024` | `512` |
 
-## 5. Loss Graph
-
-Les graphs ci-dessous montrent la progression des pertes d'entraînements et de validations au cours de chaque epoch, lors de nos apprentissages nous avons utilisé ce graph afin d'étudier la convergence du modèle pour détecter le sur-apprentissage et adapter le nombre d'epochs nécessaire.
-
-![Pertes d'Entraînement et de Validation](./images/epoch_loss_v1.jpg)
-
-## 4. Matrice de Confusion
-La matrice de confusion ci-dessous montre les performances du modèle sur le jeu de données de test.
-
-![Matrice de Confusion](./images/confusion_matrix_v1.png)
-
-## 1. Logs
+## 3. Logs
 
 ```
 Epoch 1/6
@@ -57,13 +54,18 @@ _Dernière Ligne du log :_
 Perte d’Entraînement (dernier epoch) : **1.6851**  
 Perte de Validation (dernier epoch) : **1.1672**
 
-## 2. Exemples du Jeu de Données
-Voici quelques exemples tirés du jeu de données, incluant des échantillons utilisés pour l'entraînement, la validation et le test.
+## 4. Loss Graph
 
-![Exemple d'Entraînement 1](https://raw.githubusercontent.com/Souhila06/Souhila06.github.io/refs/heads/main/images/maksssksksss0.png)
-![Exemple d'Entraînement 2](https://raw.githubusercontent.com/Souhila06/Souhila06.github.io/refs/heads/main/images/maksssksksss1.png)
+Les graphs ci-dessous montrent la progression des pertes d'entraînements et de validations au cours de chaque epoch, lors de nos apprentissages nous avons utilisé ce graph afin d'étudier la convergence du modèle pour détecter le sur-apprentissage et adapter le nombre d'epochs nécessaire.
 
-## 3. Exemples de détections
+![Pertes d'Entraînement et de Validation](./images/epoch_loss_v1.jpg)
+
+## 5. Matrice de Confusion
+La matrice de confusion ci-dessous montre les performances du modèle sur le jeu de données de test.
+
+![Matrice de Confusion](./images/confusion_matrix_v1.png)
+
+## 6. Exemples de détections
 Voici quelques exemples provenant de différentes versions de notre modèle, on peut voir des erreur dans nos tests qui ont mené à un modèl sous-entrainés et parfois de fausses détections provenants d'un sur-entrainement. Finalement nous avons conservé le modèle le plus équilibré.
 
 D'autres évaluations sont disponibles dans le notebook eval.ipynb
