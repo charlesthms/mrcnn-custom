@@ -68,7 +68,7 @@ Les graphs ci-dessous montrent la progression des pertes d'entraînements et de 
 
 ![Pertes d'Entraînement et de Validation](./images/epoch_loss_v1.jpg)
 
-On peut remarquer que l'entrainement overfit à partir de 2 epochs (en partant de 0) nous avons donc entrainer le modèle sur **3 epochs** par la suite
+On peut remarquer que l'entrainement overfit à partir de 2 epochs (en partant de 0) nous avons donc entrainé le modèle sur **3 epochs** par la suite
 
 ## 5. Matrice de Confusion
 La matrice de confusion ci-dessous montre les performances du modèle sur le jeu de données de test entrainé sur 3 epochs.
