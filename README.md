@@ -12,6 +12,31 @@ Ce rapport détaille le processus d'entraînement et les résultats de notre mod
 
 Ce répertoire contient les notebook utilisés pour entrainer et évaluer le modèle dans le dossier ```/src/eval.ipynb``` et ```/src/train.ipynb```
 
+
+
+## 6. Hyperparamètres
+Le tableau suivant résume les hyperparamètres que nous avons testés lors de l'entraînement et la valeur finale que nous avons utilisé.
+
+| Hyperparamètre       | Valeur(s) Testée(s)        | Valeur Finale        |
+|----------------------|----------------------------|-----------------------|
+| Learning Rate | `0.001`, `0.005`, `0.01` | `0.001`           |
+| Optimizer           | `SGD`, `Adam`   | `SGD`               |
+| Steps per Epoch               |  `100`, `250`, `500`  |  `100`                |
+| Epochs             |  `2`, `5`, `10`, `20`  |  `6`                |
+| Regularization       | `L1: 0.001`, `L1: 0.0001`  | `Pas de L1, uniquement le régularisateur L2 par défaut` |
+|IMAGE_MAX_DIM | `512`, `1024` | `512` |
+
+## 5. Loss Graph
+
+Les graphs ci-dessous montrent la progression des pertes d'entraînements et de validations au cours de chaque epoch, lors de nos apprentissages nous avons utilisé ce graph afin d'étudier la convergence du modèle pour détecter le sur-apprentissage et adapter le nombre d'epochs nécessaire.
+
+![Pertes d'Entraînement et de Validation](./images/epoch_loss_v1.jpg)
+
+## 4. Matrice de Confusion
+La matrice de confusion ci-dessous montre les performances du modèle sur le jeu de données de test.
+
+![Matrice de Confusion](./images/confusion_matrix_v1.png)
+
 ## 1. Logs
 
 ```
@@ -47,35 +72,11 @@ D'autres évaluations sont disponibles dans le notebook eval.ipynb
 ![Exemple1](./images/fail.png)
 
 
-## 4. Matrice de Confusion
-La matrice de confusion ci-dessous montre les performances du modèle sur le jeu de données de test.
-
-![Matrice de Confusion](./images/confusion_matrix_v1.png)
-
-## 5. Graphe des Pertes
-
-Les graphs ci-dessous montrent la progression des pertes d'entraînements et de validations au cours de chaque epoch, lors de nos apprentissages nous avons utilisé ce graph afin d'étudier la convergence du modèle pour détecter le sur-apprentissage et adapter le nombre d'epochs nécessaire.
-
-![Pertes d'Entraînement et de Validation](./images/epoch_loss_v1.jpg)
-
-## 6. Hyperparamètres
-Le tableau suivant résume les hyperparamètres que nous avons testés lors de l'entraînement et la valeur finale que nous avons utilisé.
-
-| Hyperparamètre       | Valeur(s) Testée(s)        | Valeur Finale        |
-|----------------------|----------------------------|-----------------------|
-| Learning Rate | `0.001`, `0.005`, `0.01` | `0.001`           |
-| Optimizer           | `SGD`, `Adam`   | `SGD`               |
-| Epochs               |  `100`, `250`, `500`  |  `100`                |
-| Regularization       | `L1: 0.001`, `L1: 0.0001`  | `Pas de L1, uniquement le régularisateur L2 par défaut` |
-|IMAGE_MAX_DIM | `512`, `1024` | `512` |
-
 ## 7. Observations et Commentaires
 Basé sur les résultats, voici quelques observations et réflexions générées manuellement :
   
 - **Efficacité des Hyperparamètres :** Parmi les hyperparamètres testés, pour notre dataset, le taux d'apprentissage de `0.001` avec l'optimiseur `SGD` a permis la meilleur convergence.
 
 - **Analyse de la Matrice de Confusion :** On peut  conclure que notre modèle est performant mais pourrait être perfectible en testant d'autres paramètres, en faisant attention à ne pas être dans un cas d'overfiting.
-
-
 
 ---
