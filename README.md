@@ -13,7 +13,7 @@ Ce rapport détaille le processus d'entraînement et les résultats de notre mod
 Ce répertoire contient les notebook utilisés pour entrainer et évaluer le modèle dans le dossier ```/src/eval.ipynb``` et ```/src/train.ipynb```
 
 ## 1. Jeu de Données
-Voici quelques exemples tirés du jeu de données, incluant des échantillons utilisés pour l'entraînement, la validation et le test.
+Voici quelques exemples tirés du jeu de données. Notre dataset contient 200 images que nous avons annotées avec l'outil **VIA**. Le fichier exporté est nommé annotations.json dans ```/src/annotations.json```
 
 ![data](./images/maksssksksss101.png)
 ![data](./images/maksssksksss102.png)
@@ -30,29 +30,37 @@ Le tableau suivant résume les hyperparamètres que nous avons testés lors de l
 | Learning Rate | `0.001`, `0.005`, `0.01` | `0.001`           |
 | Optimizer           | `SGD`, `Adam`   | `SGD`               |
 | Steps per Epoch               |  `100`, `250`, `500`  |  `100`                |
-| Epochs             |  `2`, `5`, `10`, `20`  |  `6`                |
+| Epochs             |  `2`, `5`, `10`, `20`  |  `10`                |
 | Regularization       | `L1: 0.001`, `L1: 0.0001`  | `Pas de L1, uniquement le régularisateur L2 par défaut` |
 |IMAGE_MAX_DIM | `512`, `1024` | `512` |
 
 ## 3. Logs
 
 ```
-Epoch 1/6
-100/100 [==============================] - 1575s 16s/step - loss: 3.4451 - val_loss: 2.5046
-Epoch 2/6
-100/100 [==============================] - 1553s 16s/step - loss: 2.3474 - val_loss: 2.3218
-Epoch 3/6
-100/100 [==============================] - 1554s 16s/step - loss: 1.8803 - val_loss: 1.3393
-Epoch 4/6
-100/100 [==============================] - 1527s 15s/step - loss: 1.7480 - val_loss: 0.9975
-Epoch 5/6
-100/100 [==============================] - 1522s 15s/step - loss: 1.6851 - val_loss: 1.1672
-Epoch 6/6
-100/100 [==============================] - 1529s 15s/step - loss: 1.5312 - val_loss: 0.7886
+Epoch 1/10
+100/100 [==============================] - 1740s 17s/step - loss: 2.2518 - val_loss: 2.5706
+Epoch 2/10
+100/100 [==============================] - 1717s 17s/step - loss: 1.4282 - val_loss: 0.9735
+Epoch 3/10
+100/100 [==============================] - 1604s 16s/step - loss: 1.1727 - val_loss: 1.3301
+Epoch 4/10
+100/100 [==============================] - 1550s 16s/step - loss: 1.1268 - val_loss: 1.2236
+Epoch 5/10
+100/100 [==============================] - 1506s 15s/step - loss: 0.8645 - val_loss: 1.2184
+Epoch 6/10
+100/100 [==============================] - 1504s 15s/step - loss: 0.9060 - val_loss: 1.2162
+Epoch 7/10
+100/100 [==============================] - 1506s 15s/step - loss: 0.7774 - val_loss: 2.4855
+Epoch 8/10
+100/100 [==============================] - 1507s 15s/step - loss: 0.6889 - val_loss: 1.7783
+Epoch 9/10
+100/100 [==============================] - 1487s 15s/step - loss: 0.7147 - val_loss: 0.7039
+Epoch 10/10
+100/100 [==============================] - 1499s 15s/step - loss: 0.5912 - val_loss: 2.3988
 ```
 _Dernière Ligne du log :_  
-Perte d’Entraînement (dernier epoch) : **1.6851**  
-Perte de Validation (dernier epoch) : **1.1672**
+Perte d’Entraînement (dernier epoch) : **0.5912**  
+Perte de Validation (dernier epoch) : **2.3988**
 
 ## 4. Loss Graph
 
