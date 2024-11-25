@@ -40,8 +40,8 @@ Le tableau suivant résume les hyperparamètres que nous avons testés lors de l
 *SCREENSHOT des logs de l'entrainement*
 
 _Dernière Ligne du log :_  
-Perte d’Entraînement (dernier epoch) : **0.5912**  
-Perte de Validation (dernier epoch) : **2.3988**
+Perte d’Entraînement (dernier epoch) : **1.2681**  
+Perte de Validation (dernier epoch) : **1.3899**
 
 ## 4. Loss Graph
 
