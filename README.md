@@ -36,28 +36,9 @@ Le tableau suivant résume les hyperparamètres que nous avons testés lors de l
 
 ## 3. Logs
 
-```
-Epoch 1/10
-100/100 [==============================] - 1740s 17s/step - loss: 2.2518 - val_loss: 2.5706
-Epoch 2/10
-100/100 [==============================] - 1717s 17s/step - loss: 1.4282 - val_loss: 0.9735
-Epoch 3/10
-100/100 [==============================] - 1604s 16s/step - loss: 1.1727 - val_loss: 1.3301
-Epoch 4/10
-100/100 [==============================] - 1550s 16s/step - loss: 1.1268 - val_loss: 1.2236
-Epoch 5/10
-100/100 [==============================] - 1506s 15s/step - loss: 0.8645 - val_loss: 1.2184
-Epoch 6/10
-100/100 [==============================] - 1504s 15s/step - loss: 0.9060 - val_loss: 1.2162
-Epoch 7/10
-100/100 [==============================] - 1506s 15s/step - loss: 0.7774 - val_loss: 2.4855
-Epoch 8/10
-100/100 [==============================] - 1507s 15s/step - loss: 0.6889 - val_loss: 1.7783
-Epoch 9/10
-100/100 [==============================] - 1487s 15s/step - loss: 0.7147 - val_loss: 0.7039
-Epoch 10/10
-100/100 [==============================] - 1499s 15s/step - loss: 0.5912 - val_loss: 2.3988
-```
+![data](./images/logs.png)
+*SCREENSHOT des logs de l'entrainement*
+
 _Dernière Ligne du log :_  
 Perte d’Entraînement (dernier epoch) : **0.5912**  
 Perte de Validation (dernier epoch) : **2.3988**
