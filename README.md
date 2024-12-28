@@ -6,6 +6,17 @@
 
 ---
 
+Mise à jour et cohérence des données (28/12/24)
+
+- La matrice de confusion fournie n'est pas basée sur les images mais
+ sur le nombre de masques détecté sur chaque image ce qui explique les 1600 résultats.
+
+- L'optimizer final est effectivement Adam car notre version avec SGD n'a pas été concluante.
+
+- Le graph des loss montre un entrainement sur 10 epochs afin de rendre visible l'overfiting
+ et de montrer pourquoi nous avons décidé de faire un entrainement limité à 3 epochs
+
+- Source du dataset : https://www.kaggle.com/datasets/andrewmvd/face-mask-detection
 
 ## Vue d'ensemble
 Ce rapport détaille le processus d'entraînement et les résultats de notre modèle, incluant les logs, des exemples du jeu de données, les graphes de perte, la matrice de confusion, les hyperparamètres, et les observations finales.
@@ -28,7 +39,7 @@ Le tableau suivant résume les hyperparamètres que nous avons testés lors de l
 | Hyperparamètre       | Valeur(s) Testée(s)        | Valeur Finale        |
 |----------------------|----------------------------|-----------------------|
 | Learning Rate | `0.001`, `0.005`, `0.01` | `0.001`           |
-| Optimizer           | `SGD`, `Adam`   | `SGD`               |
+| Optimizer           | `SGD`, `Adam`   | `Adam`               |
 | Steps per Epoch               |  `100`, `250`, `500`  |  `100`                |
 | Epochs             |  `3`, `5`, `10`, `20`  |  `3`                |
 | Regularization       | `L1: 0.001`, `L1: 0.0001`  | `Pas de L1, uniquement le régularisateur L2 par défaut` |
